@@ -257,4 +257,8 @@ p.subheading {
   .our-content {
     padding: 0 15px;
   }
+
+  .btn-common {
+    width: 100%;
+  }
 }
