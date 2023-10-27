@@ -1,0 +1,260 @@
+:root {
+  --common-black: #000;
+  --common-white: #fff;
+  --common-blue: #3240bd;
+  --common-button-background: #131a52;
+  --common-heading: #1d1d1b;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+span {
+  padding: 0;
+  margin: 0;
+}
+
+.rm-pd {
+  padding: 0;
+}
+
+.rm-mg {
+  margin: 0;
+}
+
+.font-common-style {
+  font-style: normal;
+  line-height: normal;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.panel-wrapper .panel {
+  background: var(--common-blue);
+  padding: 4px 0px;
+  text-align: center;
+}
+
+.panel-wrapper .panel .panel-text {
+  color: var(--common-white);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+section.main-container {
+  padding: 114px 150px;
+}
+
+span.black-title {
+  color: var(--common-black);
+}
+
+span.blue-title {
+  color: var(--common-blue);
+}
+
+span.black-title,
+span.blue-title {
+  font-size: 62px;
+  font-weight: 600;
+  line-height: 66px;
+}
+
+p.subtitle {
+  color: var(--common-black);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 66px;
+}
+
+.button-container {
+  margin-top: 22px;
+}
+
+.btn-common {
+  padding: 13px 16px;
+  border: 1px solid var(--common-heading);
+  background: var(--common-button-background);
+  width: 335px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  overflow: hidden; /* Hide overflowing content */
+}
+
+.btn-common:hover {
+  cursor: pointer;
+}
+
+.btn-common a {
+  color: var(--common-white);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+}
+
+.btn-common img,
+.btn-common a {
+  transition: transform 400ms ease-in-out; /* Add transition for image and text transformation */
+}
+
+.btn-common:hover img {
+  transform: translateX(40px); /* Move the image 40px to the right on hover */
+}
+
+.btn-common:hover a {
+  transform: translateX(-40px); /* Move the text 40px to the left on hover */
+  color: var(--common-white);
+}
+
+/* our details section */
+
+.our-details {
+  padding: 88px 150px;
+  background: rgba(50, 64, 189, 0.05);
+}
+
+.our-content .details {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.redirection-container {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+p.heading {
+  color: var(--common-heading);
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 36px;
+}
+
+p.subheading {
+  color: var(--common-heading);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.redirection-container a {
+  color: var(--common-blue);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none;
+}
+
+.our-content-hero img {
+  max-width: 100%;
+}
+
+.seperator-container {
+  padding: 24px 150px 0 150px;
+  background: rgba(50, 64, 189, 0.05);
+}
+
+.seperator {
+  height: 1px;
+  background: #d9d9d9;
+}
+
+.redirection-container a {
+  position: relative;
+  text-decoration: none;
+}
+
+.redirection-container a::before {
+  content: "";
+  position: absolute;
+  width: 140px;
+  height: 1px;
+  bottom: -5px;
+  left: 0; /* Start the border from the left */
+  background-color: var(--common-blue);
+  transform-origin: left; /* Set the transform origin to the left side */
+  transform: scaleX(0); /* Initially scale the border to 0 width */
+  transition: transform 0.3s ease-in-out;
+}
+
+.redirection-container a:hover::before {
+  transform: scaleX(1); /* Scale the border to full width on hover */
+  transform-origin: left; /* Change the transform origin to the right side */
+  transition: transform 0.3s ease-in-out;
+}
+
+@media screen and (min-width: 768px) {
+  .our-content-hero img {
+    opacity: 0;
+    transition: opacity 0.5s ease, height 0.5s ease;
+    height: 0;
+    overflow: hidden;
+    display: block;
+  }
+
+  .our-content:hover + .our-content-hero img {
+    opacity: 1;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section.main-container {
+    padding: 110px 20px 44px 20px;
+  }
+
+  section.seperator-container {
+    display: none;
+  }
+
+  .panel-wrapper .panel .panel-text {
+    font-size: 9px;
+  }
+  span.black-title,
+  span.blue-title {
+    font-size: 40px;
+    line-height: 56px;
+  }
+
+  p.subtitle {
+    font-size: 14px;
+    line-height: normal;
+  }
+
+  .our-details,
+  .seperator-container {
+    padding: 44px 20px;
+  }
+
+  .our-content-hero {
+    padding: 44px 15px 0 15px;
+  }
+
+  .hero-content,
+  .our-content {
+    padding: 0 15px;
+  }
+}
