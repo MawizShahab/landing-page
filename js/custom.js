@@ -14,33 +14,7 @@ $(document).ready(function () {
     $(this).toggleClass("show");
     $(".burger-menu").toggleClass("hide");
   });
-
-  // $(".goto").click(function (event) {
-  //   event.preventDefault();
-  //   var targetId = $(this).attr("href");
-  //   $("html, body").animate({ scrollTop: jQuery(targetId).offset().top }, 1000);
-  // });
 });
-
-// $(document).ready(function () {
-//   $(".owl-carousel").owlCarousel({
-//     items: 3, // Display three images per slide
-//     nav: true, // Show navigation arrows
-//     loop: true, // Enable infinite loop
-//     margin: 65, // Add spacing between images
-//     responsive: {
-//       0: {
-//         items: 1, // On small screens, show one image per slide
-//       },
-//       768: {
-//         items: 2, // On medium screens, show two images per slide
-//       },
-//       992: {
-//         items: 3, // On larger screens, show three images per slide
-//       },
-//     },
-//   });
-// });
 
 $(document).ready(function () {
   $(".question").click(function () {
@@ -53,6 +27,73 @@ $(document).ready(function () {
     } else {
       answer.slideDown();
       icon.removeClass("fa-chevron-down").addClass("fa-chevron-up");
+    }
+  });
+});
+
+$(document).ready(function () {
+  $(".text, .button-container").addClass("animate");
+});
+
+$(document).ready(function () {
+  $(".toggle-chevron").on("click", function () {
+    $(this).toggleClass("up");
+    $(this)
+      .closest(".discover-card")
+      .find(".card-description, .card-button")
+      .slideToggle();
+  });
+});
+
+$(document).ready(function () {
+  $(window).on("scroll", function () {
+    var windowWidth = $(window).width();
+    var windowHeight = $(window).height();
+    var scrollPos = $(window).scrollTop();
+    var firstOffset = $(".discover-cards-container.first").offset().top;
+    var secondOffset = $(".discover-cards-container.second").offset().top;
+
+    // Define the minimum width for desktop
+    var desktopWidth = 768;
+
+    if (windowWidth > desktopWidth) {
+      if (scrollPos > firstOffset - windowHeight + 200) {
+        $(".discover-cards-container.first").addClass("animate-cards");
+      } else {
+        $(".discover-cards-container.first").removeClass("animate-cards");
+      }
+
+      if (scrollPos > secondOffset - windowHeight + 200) {
+        $(".discover-cards-container.second").addClass("animate-cards");
+      } else {
+        $(".discover-cards-container.second").removeClass("animate-cards");
+      }
+    }
+  });
+});
+
+$(document).ready(function () {
+  $(window).on("scroll", function () {
+    var windowWidth = $(window).width();
+    var windowHeight = $(window).height();
+    var scrollPos = $(window).scrollTop();
+    var section = $(
+      ".filter-tabs-content, .tab-content.hide-by-default, .nav-tabs.hide-by-default"
+    );
+
+    // Define the minimum width for desktop
+    var desktopWidth = 768;
+
+    if (windowWidth > desktopWidth) {
+      section.each(function () {
+        var offset = $(this).offset().top;
+
+        if (scrollPos > offset - windowHeight + 200) {
+          $(this).addClass("visible");
+        } else {
+          $(this).removeClass("visible");
+        }
+      });
     }
   });
 });
