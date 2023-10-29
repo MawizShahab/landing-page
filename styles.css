@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif !important;
   padding: 0;
   margin: 0;
 }
@@ -168,6 +168,13 @@ p.subheading {
   text-decoration: none;
 }
 
+.our-content-hero {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .our-content-hero img {
   max-width: 100%;
 }
@@ -206,18 +213,368 @@ p.subheading {
   transition: transform 0.3s ease-in-out;
 }
 
+/* Animate first section */
+
+.text,
+.button-container {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Animation styles */
+.text.animate {
+  opacity: 1;
+  animation: slideFromLeft 1s ease-in-out;
+}
+
+.button-container.animate {
+  opacity: 1;
+  animation: slideFromRight 1s ease-in-out;
+}
+
+@keyframes slideFromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Cards Tab */
+
+.cards-section {
+  background: #fcfcfc;
+  padding: 120px 150px;
+}
+
+.progress-bar-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bar {
+  background: #d9d9d9;
+  height: 1px;
+  width: 320px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.inner-bar {
+  background: var(--common-blue) !important;
+  max-width: 70%;
+  height: 100%;
+  border-radius: 4px;
+}
+
+.main-title p {
+  color: var(--common-black);
+  text-align: center;
+  font-size: 44px;
+  font-weight: bold;
+  line-height: 56px;
+}
+
+.progress-bar-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 4px;
+  margin-top: 18px;
+}
+
+.progress-bar-title span {
+  color: var(--common-heading);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.card-tabs {
+  margin-top: 18px;
+  margin-bottom: 100px;
+}
+
+.card-tabs ul#myTab {
+  padding: 10px;
+  border-radius: 100px;
+  background: rgba(50, 64, 189, 0.05);
+  /* width: 380px; */
+  /* height: 50px; */
+  border: 0;
+  align-items: center;
+  gap: 10px;
+  /* justify-content: space-between; */
+}
+
+.card-tabs .nav-item button.nav-link {
+  width: 184px;
+  border: 0;
+  outline: 0;
+  color: var(--common-heading);
+  font-size: 14px;
+  font-weight: bold;
+  line-height: normal;
+}
+.card-tabs button.nav-link.active {
+  padding: 11px 50px !important;
+  border-radius: 100px !important;
+  background: #e2e2e2 !important;
+}
+
+.cards-section .tab-content {
+  width: 100%;
+}
+
+.discover-cards-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.discover-card {
+  padding: 24px 20px 20px 20px;
+  border: 1px solid #000;
+  background: #fcfcfc;
+  height: 260px;
+}
+
+.card-badge {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.discover-card.first {
+  border-right: 0;
+}
+
+.discover-card.popular {
+  height: 325px;
+  margin-top: -28px;
+}
+
+.discover-card.last {
+  border-left: 0;
+}
+
+.discover-card .card-badge span {
+  border: 1px solid #000;
+  background: rgba(50, 64, 189, 0.05);
+  box-shadow: 3px 3px 0px 0px #000;
+  padding: 10px;
+}
+
+.discover-card .card-title p {
+  color: #000;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 23px;
+  margin-bottom: 12px;
+}
+.discover-card .card-subtitle p {
+  color: #1d1d1b;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 10px;
+}
+
+.discover-card .card-price p {
+  color: #3240bd;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 50px;
+}
+
+.discover-card .card-price small {
+  color: #1d1d1b;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 50px;
+}
+
+.discover-card .card-description p {
+  color: #000;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 20px;
+}
+
+.toggle-chevron {
+  display: none;
+}
+
+/* Animate Discover Cards */
+
+.discover-cards-container {
+  opacity: 0;
+  transform: translateY(150px) translateX(100px); /* Initial position off-screen */
+  transition: opacity 0.5s ease, transform 1s ease; /* Adjust the transform transition duration */
+}
+
+.animate-cards {
+  opacity: 1;
+  transform: translateY(0) translateX(0); /* Position the elements back on-screen */
+}
+
+/* Filter tabs design */
+
+.filter-tabs-container {
+  padding: 150px;
+  background: #f8f8f8;
+  overflow-x: hidden;
+}
+
+.filter-tabs-container .main-title p {
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.filter-tabs-container .description p {
+  color: #1d1d1b;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.filter-tabs .nav-tabs {
+  margin: 74px 0;
+  border: 0;
+}
+
+.filter-tabs .nav-link {
+  border: 1px solid #1d1d1b;
+  background: #f5f5f5;
+  /* padding: 20px 16px; */
+  width: 278px;
+  height: 50px;
+  border-radius: 0;
+  outline: 0;
+  color: #1d1d1b;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-decoration: none;
+}
+
+#filter-tab1-tab,
+#filter-tab2-tab,
+#filter-tab3-tab {
+  border-right: 0;
+}
+
+.filter-tabs .nav-link:hover {
+  border: 1px solid #1d1d1b;
+}
+
+.filter-tabs .nav-link.active {
+  border: 1px solid #1d1d1b;
+  background: #131a52;
+  color: #fff;
+}
+
+.rank-container {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.ranking p {
+  color: #1d1d1b;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.ranking p small {
+  font-size: 18px;
+}
+
+.rank-seperator {
+  height: 1px;
+  background: #1d1d1b;
+  margin: 8px 0;
+}
+
+.rank-description p {
+  color: #1d1d1b;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .filter-tabs .nav-link {
+    width: 180px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1300px) {
+  .filter-tabs .nav-link {
+    width: 245px !important;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .our-content-hero img {
     opacity: 0;
-    transition: opacity 0.5s ease, height 0.5s ease;
+    transition: opacity 0.8s ease, height 0.8s ease;
     height: 0;
-    overflow: hidden;
-    display: block;
   }
 
   .our-content:hover + .our-content-hero img {
     opacity: 1;
     height: 100%;
+  }
+
+  .our-content:hover + .our-content-hero.first img {
+    height: 328px;
+    width: 363px;
+    object-fit: contain;
+  }
+
+  section.seperator-container.two {
+    padding-bottom: 100px;
+  }
+
+  .filter-tabs-content,
+  .tab-content.hide-by-default {
+    transition: transform 1s ease;
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+
+  .nav-tabs.hide-by-default {
+    transition: transform 1s ease;
+    transform: translateX(50%);
+    opacity: 0;
+  }
+
+  .visible {
+    transform: translateX(0) !important;
+    opacity: 1 !important;
   }
 }
 
@@ -250,7 +607,7 @@ p.subheading {
   }
 
   .our-content-hero {
-    padding: 44px 15px 0 15px;
+    padding: 0px 15px 24px 15px;
   }
 
   .hero-content,
@@ -260,5 +617,134 @@ p.subheading {
 
   .btn-common {
     width: 100%;
+  }
+
+  .layout {
+    flex-direction: column-reverse;
+  }
+
+  .our-content-hero.first img {
+    width: 237px;
+    height: 213px;
+    object-fit: contain;
+  }
+
+  .our-content-hero.second img {
+    width: 311px;
+    height: 136px;
+    object-fit: contain;
+  }
+  .cards-section {
+    padding: 44px 20px;
+  }
+  .main-title p {
+    font-size: 36px;
+    text-align: left;
+  }
+
+  .progress-bar-title span {
+    font-size: 16px;
+  }
+
+  .progress-bar-container {
+    align-items: center;
+  }
+
+  .progress-bar-title {
+    flex-direction: row-reverse;
+  }
+
+  .bar {
+    width: 290px;
+  }
+
+  .inner-bar {
+    max-width: 24%;
+  }
+  .card-tabs ul#myTab {
+    padding: 5px;
+  }
+
+  .card-tabs {
+    margin-top: 20px;
+    margin-bottom: 44px;
+  }
+
+  .card-tabs button.nav-link.active {
+    padding: 10px 16px !important;
+  }
+
+  .card-tabs .nav-item button.nav-link {
+    width: 125px;
+  }
+
+  .discover-cards-container {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .discover-card {
+    height: 100%;
+  }
+
+  .discover-card.first,
+  .discover-card.last {
+    border: 1px solid #000;
+  }
+
+  .discover-card.popular {
+    height: 100%;
+    margin-top: 0;
+  }
+
+  .discover-card .card-title p {
+    font-size: 16px;
+  }
+
+  .discover-card .card-price p {
+    font-size: 24px;
+  }
+
+  .hide-mobile {
+    display: none;
+  }
+
+  .card-price {
+    position: relative; /* Position the chevron relative to this container */
+  }
+
+  .toggle-chevron {
+    display: block;
+    position: absolute;
+    top: 0%; /* Adjust vertically */
+    right: 5px; /* Position to the right */
+    transform: translateY(-50%); /* Center vertically */
+    cursor: pointer;
+  }
+
+  .toggle-chevron.up {
+    transform: translateY(-50%) rotate(180deg); /* Rotate for 'up' chevron */
+  }
+
+  .filter-tabs-container {
+    padding: 44px 20px;
+  }
+
+  .filter-tabs-container .description p {
+    display: none;
+  }
+
+  .filter-tabs .nav-tabs {
+    margin: 44px 0;
+    justify-content: center;
+  }
+
+  .filter-tabs .nav-link {
+    width: 80px;
+  }
+
+  .rank-container {
+    flex-direction: column;
+    gap: 24px;
   }
 }
