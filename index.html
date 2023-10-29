@@ -57,12 +57,17 @@
       <div class="container-fluid hero-container rm-pd">
         <div class="hero-content row">
           <div class="content col-md-6 rm-pd">
-            <p class="title flex-column">
-              <span class="black-title">Pilote</span>
-              <span class="blue-title">automatique.</span>
-            </p>
-            <p class="subtitle">Solutions clés en main pour votre entreprise</p>
-            <div class="button-container">
+            <div class="text hidden">
+              <p class="title flex-column">
+                <span class="black-title">Pilote</span>
+                <span class="blue-title">automatique.</span>
+              </p>
+              <p class="subtitle">
+                Solutions clés en main pour votre entreprise
+              </p>
+            </div>
+
+            <div class="button-container hidden">
               <div class="btn-common">
                 <a href="#">Découvrir nos offres</a>
                 <img src="./images/arrow.svg" alt="arrow" />
@@ -74,7 +79,7 @@
     </section>
     <section class="our-details">
       <div class="container-fluid rm-pd">
-        <div class="row">
+        <div class="row layout">
           <div class="our-content col-md-6 rm-pd">
             <div class="details">
               <p class="heading">Un accompagnement complet</p>
@@ -89,7 +94,7 @@
               </div>
             </div>
           </div>
-          <div class="our-content-hero col-md-6 rm-pd">
+          <div class="our-content-hero first col-md-6 rm-pd">
             <img src="./images/42s.svg" alt="42s" />
           </div>
         </div>
@@ -100,7 +105,7 @@
     </section>
     <section class="our-details">
       <div class="container-fluid rm-pd">
-        <div class="row">
+        <div class="row layout">
           <div class="our-content col-md-6 rm-pd">
             <div class="details">
               <p class="heading">Une formule adaptée</p>
@@ -115,14 +120,498 @@
               </div>
             </div>
           </div>
-          <div class="our-content-hero col-md-6 rm-pd">
+          <div class="our-content-hero second col-md-6 rm-pd">
             <img src="./images/repons.svg" alt="repons" />
           </div>
         </div>
       </div>
     </section>
-    <section class="seperator-container">
+    <section class="seperator-container two">
       <div class="seperator"></div>
+    </section>
+    <section class="cards-section">
+      <div class="main-title">
+        <p>Découvrez nos offres</p>
+      </div>
+      <div class="progress-bar-container">
+        <div class="progress-bar-title">
+          <span>Community Management</span>
+          <span>Site Web</span>
+        </div>
+        <div class="bar">
+          <div class="inner-bar"></div>
+        </div>
+        <div class="card-tabs">
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active"
+                id="tab1-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#tab1"
+                type="button"
+                role="tab"
+                aria-controls="tab1"
+                aria-selected="true"
+              >
+                Mensuel
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="tab2-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#tab2"
+                type="button"
+                role="tab"
+                aria-controls="tab2"
+                aria-selected="false"
+              >
+                Annuel
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="tab-content" id="myTabContent">
+          <div
+            class="tab-pane fade show active"
+            id="tab1"
+            role="tabpanel"
+            aria-labelledby="tab1-tab"
+          >
+            <div class="discover-cards-container animate-cards first">
+              <div class="discover-card first">
+                <div class="card-title"><p>Starter</p></div>
+                <div class="card-subtitle"><p>À partir de</p></div>
+                <div class="card-price">
+                  <p>2€ <small> HT / An</small></p>
+                  <img
+                    class="toggle-chevron"
+                    src="./images/down.svg"
+                    alt="chevron"
+                  />
+                </div>
+
+                <div class="card-description hide-mobile">
+                  <p>Site web, campagne google business et facebook ads</p>
+                </div>
+                <div class="card-button hide-mobile">
+                  <div class="btn-common">
+                    <a href="#">Découvrir</a>
+                    <img src="./images/arrow.svg" alt="arrow" />
+                  </div>
+                </div>
+              </div>
+              <div class="discover-card popular">
+                <div class="card-badge">
+                  <span>Populaire</span>
+                </div>
+                <div class="card-title"><p>Pro</p></div>
+                <div class="card-subtitle"><p>À partir de</p></div>
+                <div class="card-price">
+                  <p>2€ <small> HT / An</small></p>
+                  <img
+                    class="toggle-chevron"
+                    src="./images/down.svg"
+                    alt="chevron"
+                  />
+                </div>
+                <div class="card-description hide-mobile">
+                  <p>Site web, campagne google business et facebook ads</p>
+                </div>
+                <div class="card-button hide-mobile">
+                  <div class="btn-common">
+                    <a href="#">Découvrir</a>
+                    <img src="./images/arrow.svg" alt="arrow" />
+                  </div>
+                </div>
+              </div>
+              <div class="discover-card last">
+                <div class="card-title"><p>Expert</p></div>
+                <div class="card-subtitle"><p>À partir de</p></div>
+                <div class="card-price">
+                  <p>
+                    2€ <small> HT / An</small>
+                    <img
+                      class="toggle-chevron"
+                      src="./images/down.svg"
+                      alt="chevron"
+                    />
+                  </p>
+                </div>
+                <div class="card-description hide-mobile">
+                  <p>Site web, campagne google business et facebook ads</p>
+                </div>
+                <div class="card-button hide-mobile">
+                  <div class="btn-common">
+                    <a href="#">Découvrir</a>
+                    <img src="./images/arrow.svg" alt="arrow" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="tab2"
+            role="tabpanel"
+            aria-labelledby="tab2-tab"
+          >
+            <div class="discover-cards-container animate-cards second">
+              <div class="discover-card first">
+                <div class="card-title"><p>Starter</p></div>
+                <div class="card-subtitle"><p>À partir de</p></div>
+                <div class="card-price">
+                  <p>
+                    1€ <small> HT / An</small>
+                    <img
+                      class="toggle-chevron"
+                      src="./images/down.svg"
+                      alt="chevron"
+                    />
+                  </p>
+                </div>
+                <div class="card-description hide-mobile">
+                  <p>Site web, campagne google business et facebook ads</p>
+                </div>
+                <div class="card-button hide-mobile">
+                  <div class="btn-common">
+                    <a href="#">Découvrir</a>
+                    <img src="./images/arrow.svg" alt="arrow" />
+                  </div>
+                </div>
+              </div>
+              <div class="discover-card popular">
+                <div class="card-badge">
+                  <span>Populaire</span>
+                </div>
+                <div class="card-title"><p>Pro</p></div>
+                <div class="card-subtitle"><p>À partir de</p></div>
+                <div class="card-price">
+                  <p>
+                    1€ <small> HT / An</small>
+                    <img
+                      class="toggle-chevron"
+                      src="./images/down.svg"
+                      alt="chevron"
+                    />
+                  </p>
+                </div>
+                <div class="card-description hide-mobile">
+                  <p>Site web, campagne google business et facebook ads</p>
+                </div>
+                <div class="card-button hide-mobile">
+                  <div class="btn-common">
+                    <a href="#">Découvrir</a>
+                    <img src="./images/arrow.svg" alt="arrow" />
+                  </div>
+                </div>
+              </div>
+              <div class="discover-card last">
+                <div class="card-title"><p>Expert</p></div>
+                <div class="card-subtitle"><p>À partir de</p></div>
+                <div class="card-price">
+                  <p>
+                    1€ <small> HT / An</small>
+                    <img
+                      class="toggle-chevron"
+                      src="./images/down.svg"
+                      alt="chevron"
+                    />
+                  </p>
+                </div>
+                <div class="card-description hide-mobile">
+                  <p>Site web, campagne google business et facebook ads</p>
+                </div>
+                <div class="card-button hide-mobile">
+                  <div class="btn-common">
+                    <a href="#">Découvrir</a>
+                    <img src="./images/arrow.svg" alt="arrow" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="filter-tabs-container">
+      <div class="filter-tabs-content">
+        <div class="main-title">
+          <p>Notre savoir faire sur le web</p>
+        </div>
+        <div class="description">
+          <p>
+            Je suis un texte d’essai qui a pour but d’illustrer le résultat
+            final et la place que <br />
+            prendra celui-ci. Il occupe en attendant sa place
+          </p>
+        </div>
+      </div>
+
+      <div class="filter-tabs">
+        <ul class="nav nav-tabs hide-by-default" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="filter-tab1-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#filter-tab1"
+              type="button"
+              role="tab"
+              aria-controls="filter-tab1"
+              aria-selected="true"
+            >
+              UI / UX
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="filter-tab2-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#filter-tab2"
+              type="button"
+              role="tab"
+              aria-controls="tab2"
+              aria-selected="false"
+            >
+              Produit
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="filter-tab3-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#filter-tab3"
+              type="button"
+              role="tab"
+              aria-controls="tab3"
+              aria-selected="false"
+            >
+              SEO
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="filter-tab4-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#filter-tab4"
+              type="button"
+              role="tab"
+              aria-controls="tab4"
+              aria-selected="false"
+            >
+              Growth
+            </button>
+          </li>
+        </ul>
+        <div class="tab-content hide-by-default" id="myTabContent">
+          <div
+            class="tab-pane fade show active"
+            id="filter-tab1"
+            role="tabpanel"
+            aria-labelledby="filter-tab1-tab"
+          >
+            <div class="rank-container">
+              <div class="rank">
+                <div class="ranking">
+                  <p>01 <small>Audit</small></p>
+                </div>
+                <div class="rank-seperator"></div>
+                <div class="rank-description">
+                  <p>
+                    Analyse intégrale de votre site actuel afin de faire
+                    ressortir les éventuels problèmes liés a l’ergonomie et à la
+                    navigation
+                  </p>
+                </div>
+              </div>
+              <div class="rank">
+                <div class="ranking">
+                  <p>02 <small>Recherche Utilisateur</small></p>
+                </div>
+                <div class="rank-seperator"></div>
+                <div class="rank-description">
+                  <p>
+                    Interviews, personas, définition des cibles principales et
+                    secondaires afin d’orienter au mieux la conception du
+                    produit
+                  </p>
+                </div>
+              </div>
+              <div class="rank">
+                <div class="ranking">
+                  <p>03 <small>Parcours Utilisateurs</small></p>
+                </div>
+                <div class="rank-seperator"></div>
+                <div class="rank-description">
+                  <p>
+                    Mise en place d’un userflow afin de définir toutes les
+                    interactions possibles pour les utilisateurs
+                  </p>
+                </div>
+              </div>
+              <div class="rank">
+                <div class="ranking">
+                  <p>04 <small>Conception</small></p>
+                </div>
+                <div class="rank-seperator"></div>
+                <div class="rank-description">
+                  <p>
+                    Production d’un UI Kit et d’un Design System, liés tous deux
+                    aux maquettes correspondantes
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="filter-tab2"
+            role="tabpanel"
+            aria-labelledby="filter-tab2-tab"
+          >
+            <div class="rank-container">
+              <div class="rank">
+                <div class="ranking">
+                  <p>01 <small>Google business</small></p>
+                </div>
+                <div class="rank-seperator"></div>
+                <div class="rank-description">
+                  <p>
+                    Nous mettons en place vos campagnes google business pour vos
+                    sites internets. Les offres Pro et Expert comportent chacune
+                    un budget inclus.
+                  </p>
+                </div>
+              </div>
+              <div class="rank">
+                <div class="ranking">
+                  <p>02 <small>Multi-Canaux</small></p>
+                </div>
+                <div class="rank-seperator"></div>
+                <div class="rank-description">
+                  <p>
+                    Interviews, personas, définition des cibles principales et
+                    secondaires afin d’orienter au mieux la conception du
+                    produit
+                  </p>
+                </div>
+              </div>
+              <div class="rank">
+                <div class="ranking">
+                  <p>03 <small>Création de contenus</small></p>
+                </div>
+                <div class="rank-seperator"></div>
+                <div class="rank-description">
+                  <p>
+                    Mise en place d’un userflow afin de définir toutes les
+                    interactions possibles pour les utilisateurs
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="filter-tab3"
+            role="tabpanel"
+            aria-labelledby="filter-tab3-tab"
+          >
+            <div class="rank-container">
+              <div class="rank">
+                <div class="ranking">
+                  <p>01 <small>Google business</small></p>
+                </div>
+                <div class="rank-seperator"></div>
+                <div class="rank-description">
+                  <p>
+                    Nous mettons en place vos campagnes google business pour vos
+                    sites internets. Les offres Pro et Expert comportent chacune
+                    un budget inclus.
+                  </p>
+                </div>
+              </div>
+              <div class="rank">
+                <div class="ranking">
+                  <p>02 <small>Multi-Canaux</small></p>
+                </div>
+                <div class="rank-seperator"></div>
+                <div class="rank-description">
+                  <p>
+                    Interviews, personas, définition des cibles principales et
+                    secondaires afin d’orienter au mieux la conception du
+                    produit
+                  </p>
+                </div>
+              </div>
+              <div class="rank">
+                <div class="ranking">
+                  <p>03 <small>Création de contenus</small></p>
+                </div>
+                <div class="rank-seperator"></div>
+                <div class="rank-description">
+                  <p>
+                    Mise en place d’un userflow afin de définir toutes les
+                    interactions possibles pour les utilisateurs
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="filter-tab4"
+            role="tabpanel"
+            aria-labelledby="filter-tab4-tab"
+          >
+            <div class="rank-container">
+              <div class="rank">
+                <div class="ranking">
+                  <p>01 <small>Google business</small></p>
+                </div>
+                <div class="rank-seperator"></div>
+                <div class="rank-description">
+                  <p>
+                    Nous mettons en place vos campagnes google business pour vos
+                    sites internets. Les offres Pro et Expert comportent chacune
+                    un budget inclus.
+                  </p>
+                </div>
+              </div>
+              <div class="rank">
+                <div class="ranking">
+                  <p>02 <small>Multi-Canaux</small></p>
+                </div>
+                <div class="rank-seperator"></div>
+                <div class="rank-description">
+                  <p>
+                    Interviews, personas, définition des cibles principales et
+                    secondaires afin d’orienter au mieux la conception du
+                    produit
+                  </p>
+                </div>
+              </div>
+              <div class="rank">
+                <div class="ranking">
+                  <p>03 <small>Création de contenus</small></p>
+                </div>
+                <div class="rank-seperator"></div>
+                <div class="rank-description">
+                  <p>
+                    Mise en place d’un userflow afin de définir toutes les
+                    interactions possibles pour les utilisateurs
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </body>
 </html>
